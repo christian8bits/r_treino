@@ -1,0 +1,39 @@
+Diretório de Trabalho
+```{r}
+# retornar o diretorio padrao de trabalho
+getwd() 
+# setar outro local como diretorio OBS: seta apenas dentro desse bloco
+#setwd("/home/christian/")
+```
+Tipo do objeto
+```{r}
+class(iris)
+```
+Salvar um objeto
+```{r}
+#clona
+iristeste = iris
+#salva
+save(iristeste, file="iristeste.Rdata")
+#remove do r
+rm(iristeste)
+#testa a remoção
+iristeste
+```
+Carrega
+```{r}
+#Carrega o objeto do disco
+load(file="iristeste.Rdata")
+#testa
+iristeste
+```
+Vetor e gráfico básico
+```{r}
+x = c(12,34,56,79)
+y = c(1,6,9,14)
+plot(x,y)
+```
+O conjunto de dados de flores Iris é um conjunto de dados multivariados introduzido pelo estatístico e biólogo britânico Ronald Fisher e consiste em 50 amostras de cada uma de três espécies de Iris (Iris Setosa, Iris virginica, e Iris versicolor). Foram medidas quatro características de cada amostra: o comprimento e a largura das sépalas e pétalas, em centímetros.
+```{r}
+plot(iris[,1:4])
+```
