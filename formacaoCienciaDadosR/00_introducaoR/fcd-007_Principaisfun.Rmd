@@ -1,0 +1,46 @@
+Head e Tail
+```{r}
+help(esoph)
+esoph
+
+#default 6 linhas
+head(esoph) # retorna os primeiros registros de um conjunto de dados
+tail(esoph) # retorna os ultimos registros
+#10 linhas
+head(esoph, n=10)
+```
+Dimensões
+```{r}
+# retorna o numero de linhas e colunas
+dim(esoph) # 88 linhas e 5 colunas
+# retorna apenas a primeira posicao que é 88 linhas
+dim(esoph)[1]
+# retorna a segunda posicao que é 5 colunas
+dim(esoph)[2]
+```
+Comprimento
+```{r}
+# se usar com objeto bidimensional vai retornar numero de colunas
+length(islands)
+length(esoph)
+
+```
+Nomes de Colunas
+```{r}
+colnames(esoph)
+```
+Nome de Linhas
+```{r}
+rownames(esoph)
+```
+Resumo
+```{r}
+summary(esoph)
+```
+Escolher Arquivo
+```{r}
+# abre caixa de dialogo para escolher um arquivo e salva o endereço na variavel
+x = file.choose()
+x
+```
+

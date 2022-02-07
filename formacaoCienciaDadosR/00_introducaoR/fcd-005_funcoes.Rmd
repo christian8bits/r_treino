@@ -1,0 +1,13 @@
+
+```{r}
+getwd()
+#sem parenteses
+# exibe o conteudo da funcao sd
+sd
+# executa a funcao
+head(x=iris, n=2)
+head(iris)
+head(iris,2)
+# retorna ERRO, faltou parametro obrigatorio
+head(n=22)
+```

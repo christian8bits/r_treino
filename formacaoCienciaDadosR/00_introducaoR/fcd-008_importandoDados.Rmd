@@ -1,0 +1,19 @@
+```{r}
+# caso ainda nao tenha o pacote readxl descomentar linha abaixo 
+#install.packages("readxl") 
+library(readxl)
+```
+Texto
+```{r}
+#texto
+x = read.csv(file.choose(),header = TRUE, sep = ",")
+x
+x = read.csv("dados/Credit.csv",header = TRUE, sep = ",")
+x
+```
+Excel
+```{r}
+# para ler a primeira planilha do arquivo excel 
+dados = read_excel("dados/Credit.xlsx", 1) # funcao do pacote readxl
+dados
+```
