@@ -30,26 +30,18 @@ library(datasets)  # ou library("datasets")
 ## Usando CSVs
 
 ```{r}
-df <- read_csv("dados/StateData.csv")
+library(readxl)
+df <- read.csv("dados/StateData.csv")
 head(df)
 ```
 
 ## Com outros tipos de dados
 
 ```{r}
-df <- import("dados/StateData.xlsx") %>% as_tibble()
+# import vem do pacote rio
+df <- import("dados/StateData.xlsx") %>% 
+  as_tibble()
 head(df)
-```
-
-```{r}
-df <- import("dados/StateData.xlsx") %>%  # rio::import
-  as_tibble() %>%
-  select(state_code, 
-    psychRegions,
-    instagram:modernDance) %>% 
-  mutate(psychRegions = as.factor(psychRegions)) %>%
-  rename(y = psychRegions) %>%
-  print()
 ```
 
 # Limpeza
