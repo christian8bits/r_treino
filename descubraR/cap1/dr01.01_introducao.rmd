@@ -1,7 +1,7 @@
 ---
 title: "Capítulo 01"
 subtitle: "Aula 04 - Conhecendo RStudio"
-author: "Jessica Temporal"
+author: "Christian Bits"
 output: html_document
 editor_options: 
   chunk_output_type: console

@@ -1,0 +1,82 @@
+---
+title: "Capítulo 02"
+subtitle: "Aula 06 - Dados Exemplo"
+author: "Christian Bits"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+
+# Encadeando comando com pipe
+```{r}
+# comando original
+round(prop.table(margin.table(UCBAdmissions, 3)), 2) * 100
+
+# comando com pipe
+# OBS: resultado é passado para o proximo abaixo
+UCBAdmissions %>%
+  margin.table(3) %>%
+  prop.table %>%
+  round(2) %>%
+  multiply_by(100)
+
+## Exemplo funcao: 
+# funcao(dados)
+## Exemplo pipe:
+# dados %>% funcao()
+
+## Exemplo Dados e parametro:
+# funcao(dados, arg)
+## Exemplo pipe com parametro:
+# dados %>% funcao(arg)
+```
+
+
+
+# Instalando e carregando pacotes
+
+```{r}
+library(datasets)  # datasets de exemplo
+```
+
+```{r}
+# comando help
+?datasets
+```
+
+```{r}
+library(help="datasets")  # documentação
+```
+
+# Alguns dos dados de exemplo
+
+## Íris
+```{r}
+?iris
+head(iris)
+```
+
+## UCBAdmissions
+```{r}
+?UCBAdmissions
+head(UCBAdmissions)
+```
+
+## Titanic
+```{r}
+?Titanic
+(Titanic)
+```
+
+# Limpeza
+
+```{r}
+rm(list = ls()) 
+# Limpando pacotes carregados com library()
+detach("package:datasets", unload = TRUE)
+dev.off()
+cat("\014")
+```
+
+Limpeza feita ;)
