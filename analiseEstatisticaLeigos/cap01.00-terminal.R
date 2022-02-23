@@ -1,0 +1,5 @@
+nome <- readline(prompt="Digite seu nome: ")
+idade <- readline("Informe sua idade: ")
+idade <- as.integer(idade)
+res <- paste("O aluno,", nome, "tem ", idade, "anos de idade.")
+print(res)
