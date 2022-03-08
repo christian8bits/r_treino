@@ -1,5 +1,5 @@
 ```{r}
-#importa dados, string vazio como NA, string como fatores = True
+# importa dados, string vazio como NA, string como fatores = True
 dados = read.csv("dados/Churn.csv", sep = ";", na.strings="", stringsAsFactors=T)
 head(dados)
 summary(dados)
